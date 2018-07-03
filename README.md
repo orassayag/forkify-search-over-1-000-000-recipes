@@ -1,7 +1,7 @@
 # Forkify Recipes Searcher
 
 Built in July 2018.
-Search recipes within exteranl third party API.
+Search recipes within external third party API.
 Built using HTML + CSS / Pure JavaScript ES6.
 
 ## Getting Started
@@ -24,7 +24,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
