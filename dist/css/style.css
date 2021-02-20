@@ -41,7 +41,7 @@ body {
   display: grid;
   grid-template-rows: 10rem minmax(100rem, auto);
   grid-template-columns: 1.1fr 2fr 1.1fr;
-  grid-template-areas: "head head head" "list recipe shopping";
+  grid-template-areas: "head head head""list recipe shopping";
 }
 
 @media only screen and (max-width: 68.75em) {
@@ -213,6 +213,7 @@ body {
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }

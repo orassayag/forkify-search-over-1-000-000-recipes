@@ -16,7 +16,7 @@ export const clearResults = (() => {
 
 export const highlightSelected = ((id) => {
     const resultsArr = Array.from(getElementAll(elements.recipeMenuItem));
-    
+
     resultsArr.forEach((el) => {
         el.classList.remove('results__link--active');
     });

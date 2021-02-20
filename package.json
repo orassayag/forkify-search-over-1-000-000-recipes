@@ -1,7 +1,7 @@
 {
-  "name": "forkify",
+  "name": "forkify-search-over-1-000-000-recipes",
   "version": "1.0.0",
-  "description": "forkify project",
+  "description": "forkify-search-over-1-000-000-recipes",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",

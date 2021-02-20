@@ -56,7 +56,7 @@ export default class Recipe {
         this.servings = 4;
     }
 
-    // Parse the ingredients array to propriate array
+    // Parse the ingredients array to propitiate array
     parseIngredients() {
         if (this.ingredients) {
             const unitsLong = ['tablespoons', 'tablespoon', 'ounces', 'ounce', 'teaspoons', 'teaspoon', 'cups', 'pounds'];

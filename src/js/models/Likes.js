@@ -55,7 +55,7 @@ export default class Likes {
     }
 
     readStorage() {
-        // Resotring likes from the localStorage
+        // Resorting likes from the localStorage
         const storage = localStorage.getItem('likes');
         if (storage) {
             this.likes = JSON.parse(storage);

@@ -1,13 +1,18 @@
 {
     "presets": [
-        [ "es2015", {
-            "targets": {
-               "browsers": [
-                   "last 5 versions",
-                   "ie >= 8"
-               ]
+        [
+            "es2015",
+            {
+                "targets": {
+                    "browsers": [
+                        "last 5 versions",
+                        "ie >= 8"
+                    ]
+                }
             }
-        }]
+        ]
     ],
-    "plugins": ["array-includes"] 
+    "plugins": [
+        "array-includes"
+    ]
 }

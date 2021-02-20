@@ -63,7 +63,7 @@ export const renderLoader = ((parent) => {
 
 export const matchSelector = ((node, selector) => {
     let func = node.matches || node.msMatchesSelector;
-    return func.call(node,selector);
+    return func.call(node, selector);
 });
 
 export const getClosest = ((elem, selector) => {
@@ -78,7 +78,7 @@ export const getClosest = ((elem, selector) => {
             function (s) {
                 var matches = (this.document || this.ownerDocument).querySelectorAll(s),
                     i = matches.length;
-                while (--i >= 0 && matches.item(i) !== this) {}
+                while (--i >= 0 && matches.item(i) !== this) { }
                 return i > -1;
             };
     }

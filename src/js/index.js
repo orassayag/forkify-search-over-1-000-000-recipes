@@ -28,7 +28,7 @@ polyfill();
 */
 const state = {};
 
-// SEACH CONTROLLER
+// SEARCH CONTROLLER
 const controlSearch = (() => {
     // Get query from the view
     const query = searchView.getInput();
@@ -55,7 +55,7 @@ const controlSearch = (() => {
     }
 });
 
-// SEACH CONTROLLER - PAGER
+// SEARCH CONTROLLER - PAGER
 const controlPageSearch = ((e) => {
     // Get the page destination by data on the button
     const btn = getClosest(e.target, elements.pagerBtn);
