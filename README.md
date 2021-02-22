@@ -1,4 +1,4 @@
-# Forkify Recipes Searcher
+# Forkify Search Over 1,000,000 Recipes
 
 Built in July 2018. Search recipes within external third party API. Built using HTML + CSS / Pure JavaScript ES6.
 
