@@ -30,7 +30,7 @@ export const deleteItem = ((id) => {
         return;
     }
 
-    const item = getElement(elements.shopingItemId.replace('%id%', id));
+    const item = getElement(elements.shoppingItemId.replace('%id%', id));
     if (item) {
         item.parentNode.removeChild(item);
     }

@@ -1,6 +1,6 @@
 # Forkify Search Over 1,000,000 Recipes
 
-Built in July 2018. Search recipes within external third party API. Built using HTML + CSS / Pure JavaScript ES6.
+Built in July 2018. Search recipes within an external third party API. Built using HTML + CSS / Pure JavaScript ES6.
 
 ## Getting Started
 
@@ -34,4 +34,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-This application has UNLICENSED License.
+This application has an UNLICENSED License.

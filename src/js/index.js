@@ -166,7 +166,7 @@ const controlLike = (() => {
     likesView.toggleLikesMenu(state.likes.getNumLikes());
 });
 
-// Restore liked recpies when page loads
+// Restore liked recipes when page loads
 window.addEventListener('load', (() => {
     state.likes = new Likes();
 
@@ -203,14 +203,14 @@ getElement(elements.searchResPages).addEventListener('click', ((e) => {
 getElement(elements.shopping).addEventListener('click', ((e) => {
     // Get the clicked id
     let id;
-    const item = getClosest(e.target, elements.shopingItem);
+    const item = getClosest(e.target, elements.shoppingItem);
     if (item) {
         id = item.dataset.itemid;
     }
 
     if (id) {
         // Handle delete button
-        if (matchSelector(e.target, elements.shopingDelete)) {
+        if (matchSelector(e.target, elements.shoppingDelete)) {
             // Delete from state
             state.list.deleteItem(id);
 
@@ -228,13 +228,13 @@ getElement(elements.shopping).addEventListener('click', ((e) => {
 // Handling recipe button clicks
 getElement(elements.recipe).addEventListener('click', ((e) => {
     if (matchSelector(e.target, elements.decreaseBtn)) {
-        // Decrease buttnon is clicked
+        // Decrease button is clicked
         if (state.recipe.servings > 1) {
             state.recipe.updateServings('dec');
             recipeView.updateServingsIngredients(state.recipe);
         }
     } else if (matchSelector(e.target, elements.increaseBtn)) {
-        // Increase buttnon is clicked
+        // Increase button is clicked
         state.recipe.updateServings('inc');
         recipeView.updateServingsIngredients(state.recipe);
     } else if (matchSelector(e.target, elements.recipeBtn)) {

@@ -74,7 +74,7 @@ const renderButtons = ((page, numResults, resPerPage) => {
 });
 
 export const renderResults = ((recipes, page = 1, resPerPage = 10) => {
-    // Check if any recipes exists
+    // Check if any recipes exist
     if (!recipes) {
         return;
     }
