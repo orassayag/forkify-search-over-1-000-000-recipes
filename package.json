@@ -1,7 +1,12 @@
 {
   "name": "forkify-search-over-1-000-000-recipes",
   "version": "1.0.0",
+  "private": false,
   "description": "forkify-search-over-1-000-000-recipes",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/orassayag/forkify-search-over-1-000-000-recipes.git"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
