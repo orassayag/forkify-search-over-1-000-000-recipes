@@ -2,19 +2,40 @@
   "name": "forkify-search-over-1-000-000-recipes",
   "version": "1.0.0",
   "private": false,
-  "description": "forkify-search-over-1-000-000-recipes",
+  "description": "A modern recipe search application that allows users to search, view, and manage over 1 million recipes using the Food2Fork API with features including adjustable servings, shopping lists, and favorites persistence",
+  "keywords": [
+    "recipe",
+    "search",
+    "food",
+    "cooking",
+    "food2fork",
+    "api",
+    "es6",
+    "javascript",
+    "webpack",
+    "babel",
+    "mvc",
+    "shopping-list",
+    "favorites",
+    "recipes",
+    "ingredient-parser"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/orassayag/forkify-search-over-1-000-000-recipes.git"
   },
+  "bugs": {
+    "url": "https://github.com/orassayag/forkify-search-over-1-000-000-recipes/issues"
+  },
+  "homepage": "https://github.com/orassayag/forkify-search-over-1-000-000-recipes#readme",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open"
   },
-  "author": "Or Assayag",
-  "license": "ISC",
+  "author": "Or Assayag <orassayag@gmail.com> (https://github.com/orassayag)",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
