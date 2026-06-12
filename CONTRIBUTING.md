@@ -9,13 +9,14 @@ Everyone is welcome to contribute to this project. Contributing doesn't just mea
 ### Reporting Issues
 
 If you find a bug or have a feature request:
+
 1. Check if the issue already exists in the [GitHub Issues](https://github.com/orassayag/forkify-search-over-1-000-000-recipes/issues)
 2. If not, create a new issue with:
    - Clear title and description
    - Steps to reproduce (for bugs)
    - Expected vs actual behavior
-   - Browser and version information
-   - Screenshots if applicable
+   - Error codes (if applicable)
+   - Your environment details (OS, Node version)
 
 ### Submitting Pull Requests
 
@@ -25,70 +26,62 @@ If you find a bug or have a feature request:
    git checkout -b feature/your-feature-name
    ```
 3. Make your changes following the code style guidelines below
-4. Test your changes thoroughly in different browsers
+4. Test your changes thoroughly
 5. Commit with clear, descriptive messages
 6. Push to your fork and submit a pull request
 
 ### Code Style Guidelines
 
 This project uses:
-- **ES6 JavaScript** with modern syntax
-- **Webpack** for module bundling
-- **Babel** for transpilation
-- **MVC architecture** pattern
+
+- **TypeScript** with strict type checking
+- **ESLint** for code quality
+- **Prettier** for code formatting
+- **InversifyJS** for dependency injection
 
 Before submitting:
-```bash
-# Build the project
-npm run build
 
-# Start development server and test
-npm start
+```bash
+pnpm format
+pnpm lint
+pnpm build
+pnpm test
 ```
 
 ### Coding Standards
 
-1. **MVC Pattern**: Keep models, views, and controllers separate
-2. **ES6 Modules**: Use import/export for all modules
-3. **Async/Await**: Use modern async patterns with promises
-4. **Error Handling**: Always include try/catch blocks for async operations
-5. **Naming**: Use clear, descriptive names for variables and functions
-6. **Comments**: Add comments for complex logic only
+1. **Dependency Injection**: Use @injectable decorators for services
+2. **Error handling**: All errors must include unique error codes (see `misc/error_index.txt`)
+3. **Logging**: Use structured Logger instead of console.log
+4. **Type safety**: Avoid using `any` - define proper types
+5. **Domain organization**: Place code in appropriate domain folders (not utils/)
+6. **Naming**: Use clear, descriptive names for variables and functions
 
-### Project Structure
+### Adding New Features
 
-When adding new features, maintain the existing structure:
-- **Models** (`src/js/models/`): Data and business logic
-- **Views** (`src/js/views/`): UI rendering and DOM manipulation
-- **Controllers** (`src/js/index.js`): Application flow and event handling
-- **Config** (`src/js/config.js`): Configuration and constants
+When adding new features:
 
-### Testing Your Changes
+1. Create appropriate types in `src/types/`
+2. Add service logic in `src/services/` with DI
+3. Update scripts in `src/scripts/` if needed
+4. Add error codes and update `misc/error_index.txt`
+5. Test thoroughly with vitest
 
-1. Test recipe search functionality
-2. Test recipe detail view and ingredient parsing
-3. Test servings adjustment calculations
-4. Test shopping list add/delete/update
-5. Test likes persistence in localStorage
-6. Test pagination functionality
-7. Verify responsive design on mobile devices
-8. Test in multiple browsers (Chrome, Firefox, Safari, Edge)
+### Error Code Management
 
-### API Considerations
+When adding new errors:
 
-The project uses the Food2Fork API:
-- Be mindful of API rate limits
-- Do not commit real API keys to version control
-- Test with various recipe queries
-- Handle API errors gracefully
+1. Use the next available error code from `misc/error_index.txt`
+2. Format: `[ERROR-XXXXXXX]` at the start of the error message
+3. Document the error in `misc/error_index.txt`
 
 ## Questions or Need Help?
 
 Please feel free to contact me with any question, comment, pull-request, issue, or any other thing you have in mind.
 
-* Or Assayag <orassayag@gmail.com>
-* GitHub: https://github.com/orassayag
-* StackOverflow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
-* LinkedIn: https://linkedin.com/in/orassayag
+- Or Assayag <orassayag@gmail.com>
+- GitHub: https://github.com/orassayag
+- StackOverflow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
+- LinkedIn: https://linkedin.com/in/orassayag
 
 Thank you for contributing! 🙏

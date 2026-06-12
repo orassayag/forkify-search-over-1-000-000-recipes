@@ -1,40 +1,38 @@
-import {
-    Fraction
-} from 'fractional';
-import {
-    elements,
-    getElement
-} from './base';
+import { Fraction } from 'fractional';
+import { elements, getElement } from './base';
 
-export const clearRecipe = (() => {
-    getElement(elements.recipe).innerHTML = '';
-});
+export const clearRecipe = () => {
+  getElement(elements.recipe).innerHTML = '';
+};
 
-const formatCount = ((count) => {
-    if (count) {
-        const newCount = Math.round(count * 10000) / 10000;
-        const [int, dec] = newCount.toString().split('.').map((el) => {
-            return Number(el);
-        });
+const formatCount = (count) => {
+  if (count) {
+    const newCount = Math.round(count * 10000) / 10000;
+    const [int, dec] = newCount
+      .toString()
+      .split('.')
+      .map((el) => {
+        return Number(el);
+      });
 
-        if (!dec) {
-            return newCount;
-        }
-
-        let fr;
-        if (int === 0) {
-            fr = new Fraction(newCount);
-            return `${fr.numerator}/${fr.denominator}`;
-        } else {
-            fr = new Fraction(newCount - int);
-            return `${int} ${fr.numerator}/${fr.denominator}`;
-        }
+    if (!dec) {
+      return newCount;
     }
-    return '?';
-});
+
+    let fr;
+    if (int === 0) {
+      fr = new Fraction(newCount);
+      return `${fr.numerator}/${fr.denominator}`;
+    } else {
+      fr = new Fraction(newCount - int);
+      return `${int} ${fr.numerator}/${fr.denominator}`;
+    }
+  }
+  return '?';
+};
 
 const createIngredient = (ingredient) => {
-    return `
+  return `
     <li class="recipe__item">
         <svg class="recipe__icon">
             <use href="img/icons.svg#icon-check"></use>
@@ -47,12 +45,12 @@ const createIngredient = (ingredient) => {
     </li>`;
 };
 
-const renderIngredients = ((ingredients) => {
-    return ingredients.map((el) => createIngredient(el)).join('');
-});
+const renderIngredients = (ingredients) => {
+  return ingredients.map((el) => createIngredient(el)).join('');
+};
 
-export const renderRecipe = ((recipe, isLiked) => {
-    let markup = `
+export const renderRecipe = (recipe, isLiked) => {
+  let markup = `
     <figure class="recipe__fig">
         <img src="${recipe.img}" alt="${recipe.title}" title="${recipe.title}" class="recipe__img" />
         <h1 class="recipe__title">
@@ -95,8 +93,8 @@ export const renderRecipe = ((recipe, isLiked) => {
         </button>
     </div>`;
 
-    if (recipe.ingredients) {
-        markup += `
+  if (recipe.ingredients) {
+    markup += `
         <div class="recipe__ingredients">
             <ul class="recipe__ingredient-list">
                 ${renderIngredients(recipe.ingredients)}
@@ -109,9 +107,9 @@ export const renderRecipe = ((recipe, isLiked) => {
                 <span>Add to shopping list</span>
             </button>
         </div>`;
-    }
+  }
 
-    markup += `
+  markup += `
     <div class="recipe__directions">
         <h2 class="heading-2">How to cook it</h2>
         <p class="recipe__directions-text">
@@ -126,13 +124,15 @@ export const renderRecipe = ((recipe, isLiked) => {
         </a>
     </div>
     `;
-    getElement(elements.recipe).insertAdjacentHTML('afterbegin', markup);
-});
+  getElement(elements.recipe).insertAdjacentHTML('afterbegin', markup);
+};
 
-export const updateServingsIngredients = ((recipe) => {
-    // Update servings
-    getElement(elements.servings).textContent = recipe.servings;
+export const updateServingsIngredients = (recipe) => {
+  // Update servings
+  getElement(elements.servings).textContent = recipe.servings;
 
-    // Update ingredients
-    getElement(elements.ingredientsList).innerHTML = renderIngredients(recipe.ingredients);
-});
+  // Update ingredients
+  getElement(elements.ingredientsList).innerHTML = renderIngredients(
+    recipe.ingredients
+  );
+};

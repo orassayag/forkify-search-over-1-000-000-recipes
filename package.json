@@ -2,7 +2,7 @@
   "name": "forkify-search-over-1-000-000-recipes",
   "version": "1.0.0",
   "private": false,
-  "description": "A modern recipe search application that allows users to search, view, and manage over 1 million recipes using the Food2Fork API with features including adjustable servings, shopping lists, and favorites persistence",
+  "description": "A node.js modern recipe search app built with vanilla JavaScript (ES6) that lets users search and manage 1,000,000+ recipes via the Food2Fork API. It demonstrates MVC architecture with Webpack and responsive design. Features include search recipe views adjustable servings shopping list and favorites",
   "keywords": [
     "recipe",
     "search",
@@ -20,22 +20,66 @@
     "recipes",
     "ingredient-parser"
   ],
+  "homepage": "https://github.com/orassayag/forkify-search-over-1-000-000-recipes#readme",
+  "bugs": {
+    "url": "https://github.com/orassayag/forkify-search-over-1-000-000-recipes/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/orassayag/forkify-search-over-1-000-000-recipes.git"
   },
-  "bugs": {
-    "url": "https://github.com/orassayag/forkify-search-over-1-000-000-recipes/issues"
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/orassayag"
   },
-  "homepage": "https://github.com/orassayag/forkify-search-over-1-000-000-recipes#readme",
-  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Or Assayag",
+    "email": "orassayag@gmail.com",
+    "url": "https://github.com/orassayag"
+  },
+  "contributors": [
+    {
+      "name": "Or Assayag",
+      "email": "orassayag@gmail.com",
+      "url": "https://github.com/orassayag"
+    }
+  ],
+  "type": "commonjs",
+  "main": "src/js/index.js",
+  "files": [
+    ".github",
+    ".vscode",
+    "dist",
+    "src",
+    ".babelrc",
+    ".eslintrc",
+    ".gitignore",
+    ".prettierrc",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "INSTRUCTIONS.md",
+    "knip.json",
+    "LICENSE",
+    "package-lock.json",
+    "package.json",
+    "README.md",
+    "SECURITY.md",
+    "webpack.config.js"
+  ],
   "scripts": {
-    "dev": "webpack --mode development",
     "build": "webpack --mode production",
+    "dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open"
   },
-  "author": "Or Assayag <orassayag@gmail.com> (https://github.com/orassayag)",
-  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-plugin-array-includes": "^2.0.3",
+    "es6-promise-promise": "^1.0.0",
+    "fractional": "^1.0.0",
+    "uniqid": "^5.0.3"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -48,12 +92,5 @@
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4",
     "webpack-polyfill-injector": "^2.0.2"
-  },
-  "dependencies": {
-    "axios": "^0.18.0",
-    "babel-plugin-array-includes": "^2.0.3",
-    "es6-promise-promise": "^1.0.0",
-    "fractional": "^1.0.0",
-    "uniqid": "^5.0.3"
   }
 }

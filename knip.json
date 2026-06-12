@@ -1,0 +1,10 @@
+{
+  "ignoreDependencies": [
+    "babel-plugin-array-includes",
+    "babel-preset-env",
+    "babel-preset-stage-0",
+    "webpack-dev-server",
+    "webpack-polyfill-injector"
+  ],
+  "ignoreBinaries": ["webpack", "webpack-dev-server"]
+}
